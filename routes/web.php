@@ -48,3 +48,16 @@ Route::put('/client/update/{id}', 'clientController@update')->name('client/updat
 
 /////bateau
 Route::resource('/bateau','BateauController')->only(['index','create','store','destroy']);
+
+
+//////orders
+
+Route::get('/order/{id_client}/{id_bateau}/create', 'OrderController@create')->name('order/create');
+
+
+///process
+
+Route::get('/process/exist', 'ProcessController@exist')->name('order/exist');
+
+
+Route::get('/process/blocks', 'ProcessController@blocks')->name('process/blocks');
