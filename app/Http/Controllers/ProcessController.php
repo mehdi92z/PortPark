@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Client;
 use Illuminate\Http\Request;
 
 class ProcessController extends Controller
 {
-    public function exist()
+    public function exist($id)
 	{
-        return view('back.process.exist');
+        $client=Client::find($id); 
+        return view('back.process.exist',compact('client'));
 		
 	}
 

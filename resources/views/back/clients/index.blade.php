@@ -64,7 +64,7 @@
                         <div class="dropdown-menu" role="menu" style="">
                         <a class="dropdown-item " href="{{route('client/edit',['id'=>$client->id])}}">Modifier</a>
                         <a class="dropdown-item " href="#" onclick="return confirm('vous etes sur de vouloir le supprimer')">Supprimer</a>
-                        <a class="dropdown-item " href='#'>Ajouter un bateau</a>
+                        <a class="dropdown-item " href={{ route('process/exist', ['id_client'=>$client->id]) }}>Louer une place</a>
                         </div>
                     </div>
                 </td>

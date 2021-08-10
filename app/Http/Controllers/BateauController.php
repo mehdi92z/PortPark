@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Bateau;
+use App\Client;
 
 class BateauController extends Controller
 {
@@ -23,9 +24,10 @@ class BateauController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create($id_client)
     {
-        return view('back.bateaux.create');
+        $client = Client::find($id_client);
+        return view('back.bateaux.create',compact('client'));
     }
 
     /**

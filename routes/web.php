@@ -50,15 +50,19 @@ Route::delete('/client/{id}/destroy','clientController@destroy')->name('client/d
 /////bateau
 Route::resource('/bateau','BateauController')->only(['index','create','store','destroy']);
 
+Route::get('/bateau/create2/{id_client}', 'BateauController@create')->name('bateau2/create');
+
 
 //////orders
 
 Route::get('/order/{id_client}/{id_bateau}/create', 'OrderController@create')->name('order/create');
 
+Route::get('/order/createWithBoat/{id_client}', 'OrderController@createWithBoat')->name('createWithBoat');
+
 
 ///process
 
-Route::get('/process/exist', 'ProcessController@exist')->name('order/exist');
+Route::get('/process/exist/{id_client}', 'ProcessController@exist')->name('process/exist');
 
 
 Route::get('/process/blocks', 'ProcessController@blocks')->name('process/blocks');
