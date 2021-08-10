@@ -3,7 +3,6 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Client;
 
 class Bateau extends Model
 {
@@ -12,6 +11,6 @@ class Bateau extends Model
     ];
 
     public function client(){
-        return $this->belongsTo(Client);
+        return $this->belongsTo('App\Client');
     }
 }
