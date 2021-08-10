@@ -60,7 +60,7 @@
 				</div><div class="form-group row">
 					<div class="col">
 						<label for="client_id">ID client</label>
-						<input type="text" class="form-control" id="client_id" name="client_id" placeholder="Entrer ID" value="{{$client->id}}" disabled>
+						<input type="text" class="form-control" id="client_id" name="client_id" placeholder="Entrer ID" @if(isset($client))value="{{$client->id}} disabled @endif">
 					</div>
 				</div>
 				
