@@ -5,6 +5,7 @@
 
 
 <div class="col-md-3 col-sm-6 col-12">
+    <a href={{ route('bateau2/create', ['id_client'=>$client->id]) }}>
     <div class="info-box">
       <span class="info-box-icon bg-success"><i class="fas fa-plus"></i></span>
 
@@ -14,6 +15,7 @@
       <!-- /.info-box-content -->
     </div>
     <!-- /.info-box -->
+    </a>
 </div>
 
 <div class="card card-info">
@@ -28,11 +30,9 @@
           <label for="inputEmail3" class="col-sm-2 col-form-label">Navire</label>
           <div class="col-sm-10">
               <select name="" id="" class="custom-select">
-                  <option value="">goku</option>
-                  <option value="">dragon</option>
-                  <option value="">ball</option>
-                  <option value="">z</option>
-              
+                  @foreach ($client->bateaus as $bateau)
+                  <option value="">{{$bateau->nom}}</option>
+                  @endforeach
               </select>
           </div>
         </div>

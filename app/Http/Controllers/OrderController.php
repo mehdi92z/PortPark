@@ -19,6 +19,14 @@ class OrderController extends Controller
 
         return view('back.orders.create',compact('client','bateau'));
 	}
+
+    public function createWithBoat($id_client)
+	{		
+        $client= Bateau::find($id_client);
+
+        return view('back.orders.createWithBoat',compact('client'));
+	}
+
 	
 
 	public function store()
