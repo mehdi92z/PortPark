@@ -9,7 +9,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>portPark</title>
+  <title>PortPark</title>
 
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="{{asset('admin/plugins/fontawesome-free/css/all.min.css')}}">
@@ -34,7 +34,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Accueil</a>
+        <a href="{{route('home')}}" class="nav-link">Accueil</a>
       </li>
     </ul>
 
@@ -58,7 +58,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
-      <img src="{{asset('front/img/ann/newlogo.png')}}" alt="AdminLTE Logo" class="brand-image  elevation-3"
+      <img src="{{asset('admin/dist/img/avata')}}" alt="AdminLTE Logo" class="brand-image  elevation-1"
            style="opacity: .8">
     </a>
 
@@ -73,7 +73,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
           
             <li class="nav-item">
-              <a  class="nav-link">
+              <a  class="nav-link" href="{{route('home')}}">
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
                   Accueil
@@ -110,45 +110,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </ul>
             </li>
             <li class="nav-item">
-              <a  class="nav-link">
+              <a  class="nav-link" href="{{route('blocks')}}">
                 <i class="nav-icon fas fa-sliders-h"></i>
                 <p>
                   Block
                 </p>
-                <i class="right fas fa-angle-left"></i>
               </a>
-              <ul class="nav nav-treeview" style="display: none;">
-                <li class="nav-item">
-                  <a  class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Block A</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a  class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Block B </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a  class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Block C </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a  class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Block D </p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a  class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Block E </p>
-                  </a>
-                </li>
-              </ul>
+              
             </li>
             <li class="nav-item">
               <a  class="nav-link">
