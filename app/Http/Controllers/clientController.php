@@ -67,6 +67,6 @@ class clientController extends Controller
 
 	public function destroy()
 	{
-		
+
 	}
 }

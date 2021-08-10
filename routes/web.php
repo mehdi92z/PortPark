@@ -41,3 +41,6 @@ Route::get('/clients', 'clientController@index')->name('clients');
 Route::get('/client/create', 'clientController@create')->name('client/create');
 Route::post('/client/store', 'clientController@store')->name('client/store');
 
+
+/////bateau
+Route::resource('/bateau','BateauController')->only(['index','create','store','destroy']);
