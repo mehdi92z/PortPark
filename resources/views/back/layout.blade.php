@@ -90,9 +90,9 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
               <ul class="nav nav-treeview" style="display: none;">
                 <li class="nav-item">
-                  <a  class="nav-link">
+                  <a href="{{route('clients')}}" class="nav-link">
                     <i class="far fa-circle nav-icon"></i>
-                    <p>All</p>
+                     <p>All</p>
                   </a>
                 </li>
                 <li class="nav-item">

@@ -39,5 +39,9 @@ Route::post('/reservation/{id}/store', 'reservationController@store')->name('res
 /////////client
 Route::get('/clients', 'clientController@index')->name('clients');
 Route::get('/client/create', 'clientController@create')->name('client/create');
+Route::get('/client/{id}/edit', 'clientController@edit')->name('client/edit');
 Route::post('/client/store', 'clientController@store')->name('client/store');
+Route::put('/client/update/{id}', 'clientController@update')->name('client/update');
+
+
 
