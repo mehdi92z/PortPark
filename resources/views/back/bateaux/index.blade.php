@@ -45,26 +45,26 @@
 					<table id="example2" class="table table-bordered table-hover">
 						<thead>
 							<tr>
-								<th>nom bateau</th>
-								<th>type</th>
-								<th>indicatif</th>
-								<th>poids</th>
-								<th>longueur</th>
-								<th>largeur</th>
-								<th>id client</th>
+								<th>Nom client</th>
+								<th>Nom bateau</th>
+								<th>Type</th>
+								<th>Indicatif</th>
+								<th>Poids</th>
+								<th>Longueur</th>
+								<th>Largeur</th>
 								<th>Action</th>
 							</tr>
 						</thead>
 						<tbody>
 							@foreach($bateaux as $bateau)
 							<tr>
+								<td>{{$bateau->client->nom}}</td>
 								<td>{{$bateau->nom}}</td>
 								<td>{{$bateau->type}}</td>
 								<td>{{$bateau->indicatif}}</td>
 								<td>{{$bateau->poids}}</td>
 								<td>{{$bateau->longueur}}</td>
 								<td>{{$bateau->largeur}}</td>
-								<td>{{$bateau->client_id}}</td>
 								<td>
 									<form action="{{route('bateau.destroy',$bateau->id)}}" method="Post">
 										@method('DELETE')
