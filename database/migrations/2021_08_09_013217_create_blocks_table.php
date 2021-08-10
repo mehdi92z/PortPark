@@ -17,8 +17,8 @@ class CreateBlocksTable extends Migration
             $table->bigIncrements('id');
             $table->string('nom');
             $table->string('capacite');
-            $table->string('disponible');
-            $table->string('indisponible');
+            $table->text('disponible');
+            $table->text('indisponible');
             $table->string('disponiblen');
             $table->string('indisponiblen');
             $table->timestamps();
