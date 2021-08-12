@@ -45,6 +45,7 @@
 				</div><div class="form-group row">
 					<div class="col">
 						<label for="client_id">ID client</label>
+
 						<input type="text" class="form-control" id="client_id" name="client_id" value="{{$client->id}}" >
 					</div>
 				</div>
