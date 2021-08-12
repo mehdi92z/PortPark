@@ -63,6 +63,5 @@ Route::get('/order/createWithBoat/{id_client}', 'OrderController@createWithBoat'
 ///process
 
 Route::get('/process/exist/{id_client}', 'ProcessController@exist')->name('process/exist');
-
-
+Route::get('/process/places', 'ProcessController@places')->name('process/places');
 Route::post('/process/blocks', 'ProcessController@blocks')->name('process/blocks');

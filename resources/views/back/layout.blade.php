@@ -134,7 +134,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
               </a>
             </li>
             <li class="nav-item">
-              <a  class="nav-link">
+              <a  class="nav-link" href={{route('process/places')}}>
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
                   Places
