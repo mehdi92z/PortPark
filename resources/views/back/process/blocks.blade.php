@@ -13,7 +13,7 @@
             </div>
             <a href="#" class="small-box-footer">Choisir <i class="fas fa-arrow-circle-right"></i></a>
             </div>
-        </div>
+        </div>  
         
         @foreach ($blocks as $block)
             <div class="col-lg-4 col-6">

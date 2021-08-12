@@ -23,4 +23,9 @@ class ProcessController extends Controller
         return view('back.process.blocks',compact('bateau','blocks'));
 		
 	}
+
+    public function places(){
+        $blocks = Block::all();
+        return view('back.process.places',compact('blocks'));
+    }
 }
