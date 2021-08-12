@@ -51,7 +51,7 @@ class BateauController extends Controller
             'client_id' => 'required|exists:clients,id'
         ]);
         Bateau::create($request->all());
-        return redirect()->route('bateau.index')->with('success','Bateau creer avec succes');
+        return redirect()->route('process/exist',['id_client'=>$request->input('client_id')])->with('success','Bateau creer avec succes');
     }
 
     /**

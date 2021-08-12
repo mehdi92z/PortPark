@@ -3,7 +3,7 @@
 
 <br><br>
 
-
+<h1 style="text-align: center">{{$client->nom .' '. $client->prenom}}</h1>
 <div class="col-md-3 col-sm-6 col-12">
     <a href={{ route('bateau2/create', ['id_client'=>$client->id]) }}>
     <div class="info-box">
@@ -24,14 +24,15 @@
     </div>
     <!-- /.card-header -->
     <!-- form start -->
-    <form class="form-horizontal">
+    <form class="form-horizontal" method="post" action = {{ route('process/blocks') }} >
+        @csrf
       <div class="card-body">
         <div class="form-group row">
           <label for="inputEmail3" class="col-sm-2 col-form-label">Navire</label>
           <div class="col-sm-10">
-              <select name="" id="" class="custom-select">
+              <select name="id_bateau" id="" class="custom-select">
                   @foreach ($client->bateaus as $bateau)
-                  <option value="">{{$bateau->nom}}</option>
+                  <option value="{{$bateau->id}}">{{$bateau->nom}}</option>
                   @endforeach
               </select>
           </div>

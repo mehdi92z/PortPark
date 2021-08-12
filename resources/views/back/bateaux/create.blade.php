@@ -2,22 +2,7 @@
 
 @section('content')
 <div class="col-md-12">
-	
-	@if($message = Session::get('success'))
-	<div class="alert alert-success alert-block">
-		<button type="button" class="close" data-dismiss="alert">×</button>
-		<strong>{{ $message }}</strong>
-	</div>
-	@endif
-	@if ($errors->any())
-	    <div class="alert alert-danger">
-	        <ul>
-	            @foreach ($errors->all() as $error)
-	                <li>{{ $error }}</li>
-	            @endforeach
-	        </ul>
-	    </div>
-	@endif
+
 	<div class="card card-primary">
 		<div class="card-header">
 			<h3 class="card-title">Ajouter un bateau</h3>
@@ -60,7 +45,8 @@
 				</div><div class="form-group row">
 					<div class="col">
 						<label for="client_id">ID client</label>
-						<input type="text" class="form-control" id="client_id" name="client_id" placeholder="Entrer ID" @if(isset($client))value="{{$client->id}} disabled @endif">
+
+						<input type="text" class="form-control" id="client_id" name="client_id" value="{{$client->id}}" >
 					</div>
 				</div>
 				
