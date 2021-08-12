@@ -22,7 +22,7 @@ class OrderController extends Controller
 
     public function createWithBoat($id_client)
 	{		
-        $client= Bateau::find($id_client);
+        $client= Client::find($id_client);
 
         return view('back.orders.createWithBoat',compact('client'));
 	}

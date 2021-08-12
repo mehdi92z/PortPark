@@ -24,10 +24,13 @@ class BateauController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id_client)
+    public function create($id_client=null)
     {
-        $client = Client::find($id_client);
-        return view('back.bateaux.create',compact('client'));
+        if(isset($id_client)){
+            $client = Client::find($id_client);
+            return view('back.bateaux.create',compact('client'));
+        }else
+            return view('back.bateaux.create');
     }
 
     /**
