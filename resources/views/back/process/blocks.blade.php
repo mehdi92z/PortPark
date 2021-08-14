@@ -24,7 +24,7 @@
                         <h2 style="font-size: 50px"><strong>{{$block->disponiblen}}</strong></h2>
                         <p>{{$block->capacite}}</p>
                     </div>
-                    <a href="#" class="small-box-footer">Choisir <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href={{route('order/create',['id_bateau'=>$bateau->id,'id_block'=>$block->id])}} class="small-box-footer">Choisir <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
         @endforeach

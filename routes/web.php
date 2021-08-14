@@ -55,7 +55,9 @@ Route::get('/bateau/create2/{id_client}', 'BateauController@create')->name('bate
 
 //////orders
 
-Route::get('/order/{id_client}/{id_bateau}/create', 'OrderController@create')->name('order/create');
+Route::get('/order/{id_bateau}/{id_block}/create', 'OrderController@create')->name('order/create');
+
+Route::post('/order/store', 'OrderController@store')->name('order/store');
 
 Route::get('/order/createWithBoat/{id_client}', 'OrderController@createWithBoat')->name('createWithBoat');
 
