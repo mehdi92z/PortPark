@@ -4,12 +4,6 @@
 <link rel="stylesheet" href="{{asset('admin/plugins/datatables-responsive/css/responsive.bootstrap4.min.css')}}">
 @endsection
 @section('content')
-@if($message = Session::get('success'))
-<div class="alert alert-success alert-block">
-	<button type="button" class="close" data-dismiss="alert">x</button>
-	<strong>{{ $message }}</strong>
-</div>
-@endif
 <section class="content-header">
 	<div class="container-fluid">
 		<div class="row mb-2">
@@ -62,10 +56,11 @@
 								<td>{{$bateau->nom}}</td>
 								<td>{{$bateau->type}}</td>
 								<td>{{$bateau->indicatif}}</td>
-								<td>{{$bateau->poids}}</td>
+								<td>{{$bateau->poid}}</td>
 								<td>{{$bateau->longueur}}</td>
 								<td>{{$bateau->largeur}}</td>
 								<td>
+									<a href="{{route('bateau.edit',$bateau->id)}}" class="btn btn-xs btn-primary mb-lg-2">Modifier</a>
 									<form action="{{route('bateau.destroy',$bateau->id)}}" method="Post">
 										@method('DELETE')
 										@csrf

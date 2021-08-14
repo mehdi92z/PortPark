@@ -48,7 +48,7 @@ Route::delete('/client/{id}/destroy','clientController@destroy')->name('client/d
 
 
 /////bateau
-Route::resource('/bateau','BateauController')->only(['index','create','store','destroy']);
+Route::resource('/bateau','BateauController')->only(['index','create','edit','store','update','destroy']);
 
 Route::get('/bateau/create2/{id_client}', 'BateauController@create')->name('bateau2/create');
 
