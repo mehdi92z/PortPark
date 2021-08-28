@@ -126,10 +126,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
                 </p>
               </a>
             </li> <li class="nav-item">
-              <a  class="nav-link">
+              <a  class="nav-link" href="{{route('carenage/index')}}">
                 <i class="nav-icon far fa-image"></i>
                 <p>
-                  Facture
+                  Carenage
                 </p>
               </a>
             </li>

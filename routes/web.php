@@ -75,6 +75,12 @@ Route::post('/passage/store', 'PassageController@store')->name('passage/store');
 
 Route::get('/passage/facture/{id}', 'PassageController@facture')->name('passage/facture');
 
+
+////carenage
+Route::post('/carenage/store', 'CarenageController@store')->name('carenage/store');
+Route::get('/carenage/facture/', 'CarenageController@facture')->name('carenage/facture');
+Route::get('/carenages', 'CarenageController@index')->name('carenage/index');
+Route::get('/carenage/terminer/{id}', 'CarenageController@terminer')->name('carenage/terminer');
 ///process
 
 Route::get('/process/exist/{id_client}', 'ProcessController@exist')->name('process/exist');
