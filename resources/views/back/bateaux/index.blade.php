@@ -66,6 +66,13 @@
 										@csrf
 										<button type="submit" class="btn btn-xs btn-danger mb-lg-2"  onclick="return confirm('Etes vous sur ?')">Supprimer</button>
 									</form>
+									
+									<form action="{{route('passage/store')}}" method="Post">
+										@csrf
+										<input name="id_bateau" type="hidden" value={{$bateau->id}}>
+										<input name="id_client" type="hidden" value={{$bateau->client->id}}>
+										<button type="submit" class="btn btn-xs btn-success mb-lg-2"  onclick="return confirm('Etes vous sur ?')">passage</button>
+									</form>
 								</td>
 							</tr>
 							@endforeach
