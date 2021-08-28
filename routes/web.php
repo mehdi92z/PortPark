@@ -55,12 +55,25 @@ Route::get('/bateau/create2/{id_client}', 'BateauController@create')->name('bate
 
 //////orders
 
+Route::get('/orders', 'OrderController@index')->name('orders');
+
+
+Route::get('/orders/client/{id}', 'OrderController@client')->name('orders/client');
+
+Route::get('/order/facture/{id}', 'OrderController@facture')->name('order/facture');
+
+
 Route::get('/order/{id_bateau}/{id_block}/create', 'OrderController@create')->name('order/create');
 
 Route::post('/order/store', 'OrderController@store')->name('order/store');
 
 Route::get('/order/createWithBoat/{id_client}', 'OrderController@createWithBoat')->name('createWithBoat');
 
+/////passage
+
+Route::post('/passage/store', 'PassageController@store')->name('passage/store');
+
+Route::get('/passage/facture/{id}', 'PassageController@facture')->name('passage/facture');
 
 ///process
 
