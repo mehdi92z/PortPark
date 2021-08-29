@@ -152,15 +152,25 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </li>
 
             <li class="nav-item">
-              <a  class="nav-link"  onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+              @guest
+                <a class="nav-link" href="{{route('login')}}">
+                  <p>
+                    LOGIN !!
+                  </p>
+                </a>  
+              @else
+                <a class="nav-link" href="{{ route('logout') }}"
+                onclick="event.preventDefault();
+                              document.getElementById('logout-form').submit();">
                 <i class="nav-icon fas fa-sign-out-alt"></i>
                 <p>
-                  Déconnexion
+                Déconnexion
                 </p>
-              </a>
-              <form id="logout-form" class="d-none" action="" method="POST" >
+                </a>
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
-              </form>
+</form>
+              @endguest
             </li>
         </ul>
         
