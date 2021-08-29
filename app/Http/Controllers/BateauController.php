@@ -54,6 +54,7 @@ class BateauController extends Controller
         return redirect()->route('process/exist',['id_client'=>$request->input('client_id')])->with('success','Bateau creer avec succes');
     }
 
+
     /**
      * Display the specified resource.
      *
@@ -73,7 +74,8 @@ class BateauController extends Controller
      */
     public function edit($id)
     {
-        //
+        $bateau = Bateau::findOrFail($id);
+        return view('back.bateaux.edit',compact('bateau'));
     }
 
     /**
@@ -85,7 +87,27 @@ class BateauController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'nom' => 'required|max:255',
+            'type' => 'required|max:255',
+            'indicatif' => 'required|max:255',
+            'poid' => 'required|max:255',
+            'longueur' => 'required|max:255',
+            'largeur' => 'required|max:255',
+        ]);
+
+        $bateau = Bateau::findOrFail($id);
+
+        $bateau->nom = $request->nom;
+        $bateau->type = $request->type;
+        $bateau->indicatif = $request->indicatif;
+        $bateau->poid = $request->poid;
+        $bateau->longueur = $request->longueur;
+        $bateau->largeur = $request->largeur;
+
+        $bateau->save();
+
+        return redirect()->route('bateau.index')->with('success','Bateau modifié avec succès');
     }
 
     /**

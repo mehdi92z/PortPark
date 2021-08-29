@@ -49,7 +49,7 @@ Route::group(['middleware' => 'auth'], function () { //////authentification
 
 
     /////bateau
-    Route::resource('/bateau','BateauController')->only(['index','create','store','destroy']);
+    Route::resource('/bateau','BateauController')->only(['index','create','edit','store','update','destroy']);
 
     Route::get('/bateau/create2/{id_client}', 'BateauController@create')->name('bateau2/create');
 
